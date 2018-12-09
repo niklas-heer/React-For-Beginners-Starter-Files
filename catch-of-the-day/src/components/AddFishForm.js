@@ -25,7 +25,7 @@ export default class AddFishForm extends Component {
 
   render() {
     return (
-      <form class="fish-edit" onSubmit={this.createFish}>
+      <form className="fish-edit" onSubmit={this.createFish}>
         <input name="name" ref={this.nameRef} type="text" placeholder="Name" />
         <input
           name="price"
