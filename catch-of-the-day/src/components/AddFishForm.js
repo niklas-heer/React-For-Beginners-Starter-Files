@@ -11,11 +11,11 @@ export default class AddFishForm extends Component {
     // 1. stop the from from submitting
     event.preventDefault();
     const fish = {
-      name: this.nameRef.current.value,
-      price: parseFloat(this.priceRef.current.value), // cents
-      status: this.statusRef.current.value,
-      desc: this.descRef.current.value,
-      image: this.imageRef.current.value
+      name: this.nameRef.value.value,
+      price: parseFloat(this.priceRef.value.value), // cents
+      status: this.statusRef.value.value,
+      desc: this.descRef.value.value,
+      image: this.imageRef.value.value
     };
     this.props.addFish(fish);
 

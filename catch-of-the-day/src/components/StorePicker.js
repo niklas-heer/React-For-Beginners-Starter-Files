@@ -1,19 +1,19 @@
-import React from 'react';
-import { getFunName } from '../helpers';
+import React from "react";
+import { getFunName } from "../helpers";
 
 class StorePicker extends React.Component {
   myInput = React.createRef();
 
-  goToStore = (event) => {
+  goToStore = event => {
     // 1. Stop the from from submitting
     event.preventDefault();
 
     // 2. get the text from that input
-    const storeName = this.myInput.current.value;
+    const storeName = this.myInput.value.value;
 
     // 3. Change the page to /store/whatever-they-typed
     this.props.history.push(`/store/${storeName}`);
-  }
+  };
 
   render() {
     return (
@@ -28,7 +28,7 @@ class StorePicker extends React.Component {
         />
         <button type="submit">Visit Store </button>
       </form>
-    )
+    );
   }
 }
 
