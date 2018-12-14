@@ -19,6 +19,7 @@
     "stylus": "0.54.5"
   },
   "scripts": {
+    "now-build": "react-scripts build && mv build dist",
     "dev": "react-scripts start",
     "start": "serve --single ./build",
     "watch": "concurrently --names \"webpack, stylus\" --prefix name \"npm run dev\" \"npm run styles:watch\"",
